@@ -1,2 +1,2 @@
 node_modules/
-_database_Connection.js/
+_database_Connection.js
