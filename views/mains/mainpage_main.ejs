@@ -1,0 +1,62 @@
+<% if (loggedIn && joker){ %>
+
+<div id='addjokeframe'>
+    <div id='addjokeinput'>
+        <div id='addjokeinputText'>
+            Add joke: 
+        </div>
+        <div id='addjokeinputInput'>
+            <textarea rows='1' onkeydown="textAreaAdjust(this, this.parentNode.parentNode, 24);textAreaAdjust(this, this, 0);" type="text" maxlength="1000"></textarea>
+        </div>
+    </div>
+    <div id='charactercount'>
+        <span id='currentcharactercount'>0</span>
+        <span id='maximalcharactercount'>/1000</span>
+    </div>
+    <div id='addjokebutton' class='clickable' onclick='addJoke()'>
+        submit
+    </div>
+</div>
+
+<% } %>
+
+<div id='jokeframe'>
+    <% jokes.forEach(function(joke) { %>
+        <br>
+        <div id='joke'>
+            <div id='jokeText'>
+                <%= joke.jokeText %> 
+            </div>
+
+            <% if (loggedIn == true && joke.isCreator(userId)){ %> 
+                <div id='removeJoke' class='clickable' onclick='removeJoke(<%= joke.jokeId %>)'> </div>
+            <% } %>
+            <div id='feelings'>
+                <div id='jokescore'>
+                    <%= joke.getScore() %>
+                </div>
+
+                <div id='feelJokeLove' class=<% if (joke.inLoves() && !joke.inHates()){ %> 'visible' <% } else {  %> 'hidden' <%  } %> >
+                    <div id='feelJoke' >
+                        <img src="images/icon/likeSelected.png" id='loveJoke' class='clickable'     onclick='feelJoke(<%= joke.jokeId%>, null,  <%= joke.getNeutralScore() + 0 %>, this.parentNode.parentNode.parentNode)'>
+                        <img src="images/icon/dislike.png" id='hateJoke' class='clickable'          onclick='feelJoke(<%= joke.jokeId%>, 0,     <%= joke.getNeutralScore() - 1 %>, this.parentNode.parentNode.parentNode)'>
+                    </div>         
+                </div>
+
+                <div id='feelJokeHate' class=<% if (!joke.inLoves() && joke.inHates()){ %> 'visible' <% } else {  %> 'hidden' <%  } %> >
+                    <div id='feelJoke'>
+                        <img src="images/icon/like.png" id='loveJoke' class='clickable'             onclick='feelJoke(<%= joke.jokeId%>,  1,    <%= joke.getNeutralScore() + 1 %>, this.parentNode.parentNode.parentNode)'>
+                        <img src="images/icon/dislikeSelected.png"id='hateJoke' class='clickable'   onclick='feelJoke(<%= joke.jokeId%>,  null, <%= joke.getNeutralScore() + 0 %>, this.parentNode.parentNode.parentNode)'>                 
+                    </div>
+                </div>
+
+                <div id ='feelJokeNeutral' class=<% if (!joke.inLoves() && !joke.inHates()){ %> 'visible' <% } else {  %> 'hidden' <%  } %>  >
+                    <div id='feelJoke'>
+                        <img src="images/icon/like.png" id='loveJoke' class='clickable'             onclick='feelJoke(<%= joke.jokeId%>,  1, <%= joke.getNeutralScore() + 1 %>, this.parentNode.parentNode.parentNode)'>
+                        <img src="images/icon/dislike.png"id='hateJoke' class='clickable'           onclick='feelJoke(<%= joke.jokeId%>,  0, <%= joke.getNeutralScore() - 1 %>, this.parentNode.parentNode.parentNode)'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>  

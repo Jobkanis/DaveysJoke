@@ -1,0 +1,21 @@
+.curtainleft {
+    position: fixed;
+    left: 0%;
+    top: 50px;
+    width: 50%;
+    height: 100%;
+    background: rgb(192, 190, 190);
+    animation: curtainLeft 0.5s;
+    animation-fill-mode: both;
+}
+
+.curtainright {
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    width: 50%;
+    height: 100%;
+    background: rgb(192, 190, 190);
+    animation: curtainRight 0.5s;
+    animation-fill-mode: both;
+}

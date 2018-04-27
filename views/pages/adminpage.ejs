@@ -1,0 +1,32 @@
+<!-- views/pages/mainpage.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <link rel='stylesheet' type='text/css' href='css/admin.css'>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <br>
+    <main>
+        <% include ../mains/adminpage_main %>
+    </main>
+    <br>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+    <% include ../partials/curtain %>
+    <% include ../partials/menu %>
+    
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/elements.js"></script>
+    <script src="scripts/adminpage.js"></script>
+</body>
+
+</html>

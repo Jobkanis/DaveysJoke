@@ -1,0 +1,130 @@
+#addjokeframe {
+    position: relative;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    background-color: rgb(187, 180, 180);
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+#addjokeframe #addjokeinput {
+    top: 5%;
+    width: 5%;
+    width: 96%;
+    height: 90%;
+}
+
+#addjokeframe #addjokeinput #addjokeinputText {
+    text-decoration: blue;
+    bottom: 0px;
+}
+
+#addjokeframe #addjokeinput #addjokeinputInput {
+    width: 100%;
+}
+
+#addjokeframe #addjokeinput #addjokeinputInput textarea {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    resize: none;
+}
+
+#addjokeframe #addjokebutton {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 20px;
+    width: 60px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#jokeframe {
+    position: relative;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+#jokeframe #joke {
+    position: relative;
+}
+
+#jokeframe #joke #removeJoke {
+    position: absolute;
+    background-image: url("../images/icon/delete3.png");
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    background-size: 100%;
+    right: -20px;
+    top: -15px;
+    background-color: none;
+}
+
+#jokeframe #joke #removeJoke:hover {
+    background-image: url("../images/icon/deleteSelected.png");
+    background-color: transparent;
+}
+
+#jokeframe #joke #jokeText {
+    position: relative;
+    left: 0%;
+    top: 0%;
+    border-radius: 5px;
+    background-color: rgb(187, 180, 180);
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+#jokeframe #joke #feelings {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+#jokeframe #joke #feelings #jokescore {
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    padding-bottom: 10px;
+    bottom: 10%;
+    right: 65px;
+    text-align: right;
+}
+
+#jokeframe #joke #feelings #feelJoke {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 20px;
+    width: 60px;
+    padding-bottom: 10px;
+}
+
+#jokeframe #joke #feelings #feelJoke #loveJoke {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 50%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#jokeframe #joke #feelings #feelJoke #hateJoke {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0%;
+    border-radius: 5px;
+    text-align: center;
+}

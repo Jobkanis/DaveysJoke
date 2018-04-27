@@ -1,0 +1,54 @@
+#menu {
+    position: fixed;
+    transition: height 0.5s;
+    height: 200px;
+    width: 50px;
+    right: 50px;
+    bottom: 50px;
+}
+
+#menu #toggleButton {
+    animation: menuEntry 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    position: absolute;
+    cursor: pointer;
+    bottom: 0px;
+    height: 50px;
+    transition: transform 0.4s, margin 0.3s linear;
+}
+
+#menu #toggleButton:hover {
+    transform: rotate(30deg);
+}
+
+#menu.opened #toggleButton {
+    transition: transform 0.4s, margin 0.3s linear;
+    transform: rotate(30deg);
+}
+
+#menu.opened #toggleButton:hover {
+    transform: rotate(0deg);
+}
+
+#menu #menuitems * {
+    animation: menuEntry 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    position: absolute;
+    cursor: pointer;
+    bottom: 0px;
+    transition: transform 0.4s, margin 0.3s linear;
+}
+
+#menu #menuitems *:hover {
+    transform: rotate(-30deg);
+}
+
+#menu.opened #menuitems *:nth-child(1) {
+    margin-bottom: 50px;
+}
+
+#menu.opened #menuitems *:nth-child(2) {
+    margin-bottom: 100px;
+}

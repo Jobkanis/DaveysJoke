@@ -1,0 +1,47 @@
+
+<% if (loggedIn){ %>
+        <div id='userframe'>
+            <div id='tableInformation'>
+                <div id='user'>
+                    <div id='username'>
+                        <b>Username</b>
+                    </div>
+                    <div id='joined'>
+                        <b>Joined</b>
+                    </div>
+                    <div id='S_davey'>
+                        <b>Davey</b>
+                    </div>
+                    <div id='S_moderator'>
+                        <b>Moderator</b>
+                    </div>
+                    <div id='S_joker'>
+                        <b>Joker</b>
+                    </div>
+                </div>
+            </div>        
+
+            <% users.forEach(function(user) { %>
+                <div id='user'>
+                    <div id='username'>
+                        <%= user.username %>
+                    </div>
+                    <div id='joined'>
+                        <%= user.created %>
+                    </div>
+
+                    <div id='S_davey'>
+                        <input type="checkbox" disabled <% if (user.davey == true){ %> checked <% } %> >
+                    </div>
+                    <div id='S_moderator'>
+                        <input type="checkbox" <% if (user.moderator == true){ %> checked <% } if (davey == false)                      { %> disabled <% } else { %> onclick="changeModerator( <%= user.iduser %>, this )" <% } %> >
+                    </div>
+                    <div id='S_joker'>
+                        <input type="checkbox" <% if (user.joker == true){ %>  checked <% } if (davey == false && (moderator == false || userId == user.iduser))   { %> disabled <% } else { %> onclick="changeJoker( <%= user.iduser %>, this )" <% } %> >
+                    </div>
+                </div>
+            <% }); %>
+        <div>
+<% } else { %>
+    Ehh hi stranger....
+<% } %>

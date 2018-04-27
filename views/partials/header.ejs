@@ -1,0 +1,17 @@
+<img src='images/logo.png' class ='cursorPointer' id='logo' onclick='toMainpage()'>
+
+<% if (loggedIn){ %>
+    <div id="headerlogout" class='clickable' onclick="logout()">logout</div>
+    <div id="loggedInAs"> logged in as: <%=  username %> </div>
+<% } else{ %>
+
+<div id="loginButtonFields">
+    <div id="headerLogin" class='clickable' onclick="login()">login</div>
+    <div id="headerRegister" class='clickable' onclick="register()">register</div>
+</div>
+<div id="loginInputFields">
+    <input id="loginNameInput" type="text" placeholder='username'>
+    <input id="loginPasswordInput" type="password" placeholder='password'>
+</div>
+
+<% } %>

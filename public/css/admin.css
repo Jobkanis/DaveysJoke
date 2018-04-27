@@ -1,0 +1,42 @@
+#userframe {
+    position: relative;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+#userframe #user {
+    align-items: center;
+    width: 100%;
+}
+
+#userframe #user #username {
+    text-align: right;
+    display: inline-block;
+    width: 150px;
+}
+
+#userframe #user #joined {
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}
+
+#userframe #user #S_davey {
+    text-align: center;
+    display: inline-block;
+    width: 75px;
+}
+
+#userframe #user #S_moderator {
+    text-align: center;
+    display: inline-block;
+    width: 75px;
+}
+
+#userframe #user #S_joker {
+    text-align: center;
+    display: inline-block;
+    width: 75px;
+}

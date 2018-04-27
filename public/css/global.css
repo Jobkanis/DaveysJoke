@@ -1,0 +1,35 @@
+* {
+    font-size: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    width: 100%
+}
+
+body {
+    background-color: lightgray;
+    position: relative;
+    top: 50px
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    background-color: gray;
+}
+
+.clickable:active {
+    background-color: black;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+input:focus {
+    border: 1px solid #555;
+}
+
+.hidden {
+    visibility: hidden;
+}

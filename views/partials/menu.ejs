@@ -1,0 +1,9 @@
+<div id='menu' class=>
+    <div id='menuitems'>
+        <img id='mainButton' class='menuButton' onclick='toMainpage()' src='/images/menu/mainPage.png'>
+        <% if (moderator == true || davey == true){ %>
+            <img id='adminButton' class='menuButton' onclick='toAdminpage()' src='/images/menu/adminPage.png'>
+        <% } %>
+    </div>
+    <img id='toggleButton' class='menuButton' onclick='toggleMenuOptions()' src='/images/menu/menu.png'>
+</div> 
